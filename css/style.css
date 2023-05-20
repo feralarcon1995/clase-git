@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Sigmar&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: bisque;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 30px;
+    gap: 15px;
+}
+
+section ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    border: 2px solid #191919;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    gap: 15px;
+
+}
+
+section ul li:first-child {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 4px 0;
+    border-bottom: 1px solid #191919;
+}
+
+section ul li span {
+    color: coral;
+    font-weight: bold;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.red{
+    color: rgb(223, 33, 33);
+    border-radius: 0;
+}

@@ -1,12 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link al css -->
+    <link rel="stylesheet" href="css/style.css">
     <title>Clase de git </title>
 </head>
+
 <body>
-    <h1>Soy rama master</h1>
+<h1>Soy rama master</h1>
+    <section>
+        <h1>Pasos para usar git</h1>
+        <ul>
+            <li>Configurando git</li>
+            <li>
+                <span>
+                    git config --global user.name "mi nombre"
+                </span>
+                - Configura el nombre de usuario de git
+            </li>
+            <li>
+                <span>
+                    git config --global user.email miemail@ejemplo.com
+                </span>
+                - Configura el email del usuario en git
+            </li>
+        </ul>
+        <ul>
+            <li>Iniciando git</li>
+            <li>
+                <span>
+                    git init
+                </span>
+                - Inicia un repositorio de git en nuestro proyecto, esto <span class="red"> se hace 1 sola vez</span>
+                por proyecto.
+            </li>
+        </ul>
+
+        <ul>
+            <li>Trabajando con git</li>
+            <li>
+                <span>
+                    git add .
+                </span>
+                - Podemos usar el "." para guardar todos los archivos creados u modificados, o guardar archivo por
+                archivo con su nombre.
+            </li>
+            <li>
+                <span>
+                    git commit -m "titulo del commit, mientras mas detalles de lo que hice mejor"
+                </span>
+            <li>
+                <span>
+                    git status
+                </span>
+                - Verifica en que estado estamos, y ademas para saber si tengo elementos para guardar y hacer commit.
+            </li>
+            <li>
+                <span>
+                    git log
+                </span>
+                - Muestra una lista de los commits realizados.
+            </li>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                Trabajando con ramas
+            </li>
+            <li>
+                <span>
+                    git branch
+                </span>
+                - Con este comando veo el listado de ramas creadas.
+            </li>
+            <li>
+                <span>
+                    git branch nombre-de-rama
+                </span>
+                - Para crear una rama nueva.
+            </li>
+        </ul>
+    </section>
 </body>
+
 </html>
