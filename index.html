@@ -84,6 +84,39 @@
                 </span>
                 - Para crear una rama nueva.
             </li>
+            <li>
+                <span>
+                    git checkout nombre-de-rama
+                </span>
+                - Con este comando me muevo a la rama seleccionada.
+            </li>
+            <li>
+                <span>
+                    git merge nombre-de-rama
+                </span>
+                - !IMPORTANTE¡ Debo estar parado en la rama en la cual deseo traer los cambios de la rama externa. (es decir si quiero traerme los cambios de la rama2 a main , debo estar parado en main)
+            </li>
+        </ul>
+        <ul>
+            <li>Trabajando de forma remota con GITHUB</li>
+            <li>
+                <span>
+                    git remote add origin url-repositorio
+                </span>
+                - Conecta mi repo local al repo online de github 
+            </li>
+            <li>
+                <span>
+                    git remote -v
+                </span>
+                - Me muestra el url del repo online en github.
+            </li>
+            <li>
+                <span>
+                    git push -u origin main
+                </span>
+                - Empuja los cambios de mi repo local al repo de github. !ATENCION¡ el origin "main" puede ser reemplazado por el nombre de la rama que quieren pushear "git push -u origin otra-rama".
+            </li>
         </ul>
     </section>
 </body>
