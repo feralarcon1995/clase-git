@@ -102,6 +102,18 @@
                 </span>
                 - Con este comando renombro la rama actual por el nombre de la nueva rama.
             </li>
+            <li>
+                <span>
+                    git branch -d nombre-de-rama
+                </span>
+                - Comando para borrar la rama local en git.
+            </li>
+            <li>
+                <span>
+                    git push origin --delete nombre-de-rama
+                </span>
+                - Comando para borrar la rama online en github.
+            </li>
         </ul>
         <ul>
             <li>Trabajando de forma remota con GITHUB</li>
@@ -122,6 +134,30 @@
                     git push -u origin main
                 </span>
                 - Empuja los cambios de mi repo local al repo de github. !ATENCION¡ el origin "main" puede ser reemplazado por el nombre de la rama que quieren pushear "git push -u origin otra-rama".
+            </li>
+            <li>
+                <span>
+                    git remote rm origin
+                </span>
+                - Este comando borra la conexion del repo local con el repo online de github. (Hecho esto hacer el paso de git remote add origin para conectar el nuevo repositorio online)
+            </li>
+            <li>
+                <span>
+                    git clone url-del-repo-online
+                </span>
+                - Crea un clon del repo de github en mi repo local.
+            </li>
+            <li>
+                <span>
+                    git pull
+                </span>
+                - Trae todos los cambios que existan en la rama online de github.
+            </li>
+            <li>
+                <span>
+                    git fetch
+                </span>
+                - Trae todos los cambios que existan en todas las ramas online de github.
             </li>
         </ul>
     </section>
