@@ -32,6 +32,9 @@ section ul {
 
 }
 
+section ul li {
+    line-height: 30px;
+}
 section ul li:first-child {
     font-weight: bold;
     text-transform: uppercase;
