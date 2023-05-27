@@ -1,0 +1,144 @@
+.contenedor {
+    background-color: $main-color;
+
+    @if $temporada == verano {
+        background-color: rgb(174, 122, 77);
+        padding: 50px;
+    } @else if $temporada == invierno {
+        background-color: rgb(18, 30, 56);
+        padding: 50px;
+    } @else {
+        background-color: #191919;
+    }
+
+    &__hijo {
+        padding: 5px;
+
+        &__parrafo {
+            font-weight: bold;
+            font-size: 30px;
+            color: $light-color;
+            &__span {
+                color: $light-color;
+            }
+        }
+    }
+
+    .parrafo-minusculo {
+        padding: 30px 0;
+        @include fonts(24px,$main-font,bold,$light-color);
+        &-span {
+            color: $light-color;
+            transition: $transition;
+            &:hover {
+                color: $primary;
+            }
+        }
+
+        .otra {
+            color: $light-color;
+        }
+
+        a {
+            color: $light-color;
+        }
+    }
+}
+
+.bg {
+    height: 700px;
+    width: 100%;
+    @if $temporada == verano {
+        background: $bg-img;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    } @else if $temporada == invierno {
+        background: $bg-img-segundo;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    } @else {
+        background-color: #191919;
+    }
+}
+
+.box {
+    @if $temporada == invierno {
+        display: none;
+    } @else if $temporada == verano {
+        @extend .d-flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            @include imagenes(40%,300px,cover);
+            // width: 40%;
+            // height: 300px;
+            // object-fit: cover;
+        }
+
+        .box__body {
+            @include flexbox(column,space-between,center,wrap,20px);
+            padding: 30px;
+            width: 50%;
+            color: violet;
+        }
+    }
+}
+
+//EJEMPLO DE BUCLE FOR
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-size: 20px * $i;
+    }
+}
+
+@for $pepito from 1 through 12 {
+    .p-#{$pepito} {
+        padding: 2px * $pepito;
+    }
+}
+
+//EJEMPLO DE MAP
+
+$botones: (
+    primary: blue,
+    secondary: violet,
+    light: white,
+    danger: red,
+    warning: orange,
+    dark: black,
+);
+
+.btn-container {
+    // @extend .d-flex;
+    // @include flex-column;
+    @include flexbox(row,center,center,wrap,24px);
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+}
+
+@each $key, $valor in $botones {
+    .btn-#{$key} {
+        background-color: $valor;
+        padding: 15px;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: 0.3s;
+        @if $key == light {
+            color: map-get($botones, dark);
+            &:hover {
+                background-color: darken($valor, 20%);
+                box-shadow: 4px 4px 4px 0px #eeee;
+            }
+        } @else {
+            color: #eeee;
+            &:hover {
+                background-color: lighten($valor, 20%);
+                box-shadow: 4px 4px 4px 0px #eeee;
+            }
+        }
+    }
+}
