@@ -5,7 +5,7 @@
     flex-wrap: wrap;
 }
 
-.rounded{
+.rounded {
     border-radius: 10px;
 }
 
@@ -14,10 +14,18 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
-
+@mixin animacion {
+    animation-name: animacion;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    transform: scale(0);
+}
 //MIXIN CON PARAMETROS
-@mixin flexbox($direction,$justify,$align,$wrap,$gap){
+@mixin flexbox($direction, $justify, $align, $wrap, $gap) {
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
@@ -26,13 +34,13 @@
     gap: $gap;
 }
 
-@mixin imagenes($width,$height,$object){
+@mixin imagenes($width, $height, $object) {
     width: $width;
     height: $height;
     object-fit: $object;
 }
 
-@mixin fonts($size,$family,$grosor,$color){
+@mixin fonts($size, $family, $grosor, $color) {
     font-size: $size;
     font-family: $family;
     font-weight: $grosor;

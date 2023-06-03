@@ -305,6 +305,158 @@ h6 {
   box-shadow: 4px 4px 4px 0px rgba(238, 238, 238, 0.9333333333);
 }
 
+.gradiente {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-color: #191919;
+  gap: 50px;
+  overflow: hidden;
+}
+.gradiente h2 {
+  color: transparent;
+  background-image: linear-gradient(45deg, rgba(200, 177, 226, 0.9333333333), rgba(125, 50, 210, 0.9333333333));
+  font-size: 20px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: 1s;
+}
+.gradiente h2:hover {
+  background-image: linear-gradient(45deg, rgba(125, 50, 210, 0.9333333333), rgba(200, 177, 226, 0.9333333333));
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.gradiente .g-card {
+  transform: scale(1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: no-wrap;
+  gap: 20px;
+  background-color: rgba(238, 238, 238, 0.9333333333);
+}
+.gradiente .g-card img {
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+}
+.gradiente .g-card-body {
+  width: 70%;
+}
+
+@keyframes animacion {
+  0% {
+    transform: scale(0);
+    display: flex;
+    flex-direction: row-reverse;
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+  }
+}
+.carousel {
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  position: relative;
+}
+.carousel .slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  animation: slide-fade 20s infinite;
+}
+.carousel .slide:nth-child(1) {
+  animation-delay: 0;
+}
+.carousel .slide:nth-child(2) {
+  animation-delay: 5s;
+}
+.carousel .slide:nth-child(3) {
+  animation-delay: 10s;
+}
+.carousel .slide:nth-child(4) {
+  animation-delay: 15s;
+}
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes slide-fade {
+  0% {
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(90%);
+    background: linear-gradient(#494949, #191919);
+  }
+  50% {
+    transform: translateY(40%);
+    background: linear-gradient(#494949, #191919);
+  }
+  75% {
+    transform: translateY(15%);
+    background: linear-gradient(#ffa528, #fd8d25);
+  }
+  100% {
+    transform: translateY(0);
+    background: linear-gradient(#ffa528, #fd8d25);
+  }
+}
+.amanecer {
+  background-color: #2396ed;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+.amanecer .g-cajitas {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(#ffa528, #cb6f18);
+  transition: 2s;
+  padding: 10px;
+  animation: bounce 4s 1 linear;
+  border-radius: 100%;
+  box-shadow: 0px 30px 60px -40px rgba(223, 223, 223, 0.6588235294);
+}
+.amanecer .g-cajitas:hover {
+  transform: skew(10deg);
+  box-shadow: 0px 30px 60px -40px rgba(223, 223, 223, 0.6588235294);
+}
+
+@keyframes amanecer {
+  0% {
+    background-color: #2d1c33;
+  }
+  50% {
+    background-color: #1f104f;
+  }
+  75% {
+    background-color: #1f5783;
+  }
+  100% {
+    background-color: #2396ed;
+  }
+}
 .ejercicio {
   display: flex;
   flex-direction: column;
